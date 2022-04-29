@@ -1,0 +1,27 @@
+[part~="header-cell"] {
+        background: rgba(235, 238, 246, 0.9);
+
+        border-bottom: 1px solid rgba(208, 217, 225, 0.9);
+        border-top: 1px solid rgba(248, 250, 252, 0.9);
+        min-height: 35px;
+
+        background-image: linear-gradient(rgba(108, 160, 218,0), rgba(108, 160, 218,0.15));
+        background-size: 1px 100%;
+        background-position: 100% 0%;
+        background-repeat: no-repeat;
+              padding: 16px;
+              justify-content: space-between;
+}
+
+[part~="body-cell"] {
+    height: 65px;
+   padding: 0 13px;
+}
+
+
+[part~="body-row-hover-cell" {
+        background-color: rgb(235, 238, 246);
+};
+
+
+

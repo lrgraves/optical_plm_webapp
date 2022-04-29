@@ -1,0 +1,66 @@
+version: "3"
+
+services:
+  workflow-app:
+    image: ${WORKFLOW_IMAGE}
+    container_name: workflow-app
+    restart: always
+    environment:
+      VIRTUAL_HOST: ${WORKFLOW_HOST}
+      LETSENCRYPT_HOST: ${WORKFLOW_HOST}
+      VIRTUAL_PORT: ${WORKFLOW_PORT}
+      LETSENCRYPT_EMAIL:
+    expose:
+      - "${WORKFLOW_PORT}"
+    networks:
+      - web_network
+
+  nginx:
+    restart: always
+    image: "jwilder/nginx-proxy:alpine"
+    labels:
+      com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy: "true"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf:ro
+      - ./letsencrypt/certs:/etc/nginx/certs:ro
+      - ./letsencrypt/vhosts.d:/etc/nginx/vhost.d
+      - ./letsencrypt/html:/usr/share/nginx/html
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - web_network
+
+  letsencrypt:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    container_name: letsencrypt
+    environment:
+      DEFAULT_EMAIL: ${LETSENCRYPT_EMAIL}
+    volumes:
+      - ./letsencrypt/certs:/etc/nginx/certs:rw
+      - ./letsencrypt/vhosts.d:/etc/nginx/vhost.d
+      - ./letsencrypt/html:/usr/share/nginx/html
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - web_network
+    depends_on:
+      - "nginx"
+
+  docs:
+    container_name: docs
+    image: ${DOCS_IMAGE}
+    expose:
+      - 3001
+    environment:
+      VIRTUAL_HOST: ${DOCS_HOST}
+      LETSENCRYPT_HOST: ${DOCS_HOST}
+      VIRTUAL_PORT: 3001
+      LETSENCRYPT_EMAIL:
+    networks:
+      - web_network
+
+networks:
+  web_network:
+    driver: bridge

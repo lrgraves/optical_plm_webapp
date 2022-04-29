@@ -1,0 +1,5 @@
+site_name: Spark Optical Management
+theme: readthedocs
+nav:
+  - Home: 'index.md'
+  - Getting Started: 'user-guide.md'

@@ -1,0 +1,21 @@
+
+
+[part~="vaadin-vertical-layout"] {
+    height: 65px;
+   padding: 0 13px;
+}
+
+
+[part~="vaadin-horizontal-layout"] {
+    height: 65px;
+   padding: 0 px;
+}
+
+.vaadin-horizontal-layout{
+padding: 0px;
+}
+
+
+
+
+

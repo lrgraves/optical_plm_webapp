@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: ERROR
+    org.springframework.web: ERROR
+    com.auth0.example: TRACE
+    org.atmosphere: WARN
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 50MB
+  security:
+    oauth2:
+      client:
+        registration:
+          auth0:
+            client-id: ov2cE7FD8JUsZN0jwHAWZqjywbOoQ1cx
+            client-secret: muK6FBfN-yrfqE8suGRj-qcaTaW4AbqxSR5vOnEqthvlqif9vgSGCGnHJIRVOZRX
+            audience: http://eleoptics.com/uuid
+            scope:
+              - openid
+              - profile
+              - email
+              - offline_access
+              - http://eleoptics.com/uuid
+        provider:
+          auth0:
+            # trailing slash is important!
+            issuer-uri: https://dev-396vb1r5.us.auth0.com/
+
+
+vaadin:
+  compatibilityMode: false

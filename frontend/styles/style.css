@@ -1,0 +1,471 @@
+
+/*This is the main style guide for the theme material https://vaadin.com/docs/v14/themes/material/color.html */
+
+
+html {
+--material-primary-color: #122658;
+--material-contrast-color:#2CD6FF;
+--material-secondary-background-color: #E6E7E8;
+--vaadin-app-layout-navbar-background: var(--material-background-color);
+--material-contrast-color: #2CD6FF;
+--material-body-text-color: #404041;
+--material-secondary-text-color: #404041;
+--material-disabled-text-color: #404041;
+--material-primary-text-color: #404041;
+--material-error-text-color: #404041;
+/* --material-background-color: #122658; */
+--material-font-family: "Humnst777 BT";
+
+
+}
+
+vaadin-grid {
+      font: 500 13px "Humnst777 BT", sans-serif;
+      color: rgb(148, 154, 171);
+      --divider-color: rgb(223, 232, 239);
+}
+
+vaadin-horizontal-layout {
+    margin-top: 0px;
+}
+
+#a{
+font-size: 16px;
+}
+
+
+#header {
+  height: var(--material-size-xl);
+  background-color: var(--material-background-color);
+  padding: 0 px;
+}
+
+
+#header img {
+  border-radius: 50%;
+  height: var(--material-size-s);
+  margin-left: auto;
+  margin-right: var(--material-space-m);
+  background-color: var(--material-contrast);
+}
+#header h1 {
+  font-size: var(--material-font-size-xl);
+  font-weight: bold;
+  margin: 0;
+}
+
+
+#logo {
+  box-sizing: border-box;
+  box-shadow: inset 0 -1px var(--material-contrast-10pct);
+  color: #122658;
+}
+
+#label {
+  font-family: "Humnst777 Cn BT";
+    text-transform: capitalize;
+    line-height: normal;
+    font-size: 13px;
+    }
+
+#logo h1 {
+  font-size: var(--material-font-size-xl);
+  font-weight: 600;
+  margin: 0 var(--material-space-s);
+}
+
+a {
+    font-weight: normal;
+    text-decoration: none;
+}
+
+vaadin-tab {
+  font-size: var(--material-font-size-s);
+  height: var(--material-size-l);
+  font-weight: 600;
+  color: var(--material-body-text-color);
+  border-bottom: 1px solid white;
+
+}
+
+vaadin-tab:hover {
+  background-color: var(--material-contrast-5pct);
+}
+
+vaadin-tab[selected] {
+  background-color: var(--material-primary-color-10pct);
+  color: var(--material-primary-text-color);
+}
+
+.navigation-topbar {
+  background-color: var(--material-background-color);
+  padding: 0px;
+}
+.nav-menu-empty-div {
+height: 63px;
+border-bottom: 1px solid white;
+
+}
+
+.header-spark {
+      color: #404041;
+font-family: "Humnst777 Cn BT";
+}
+
+.navbar:after {
+    content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 50%; /* Change this to whatever width you want. */
+    padding-top: 20px; /* This creates some space between the element and the border. */
+    border-bottom: 1px solid black; /* This creates the border. Replace black with whatever color you want. */
+}
+
+/*The navigation between pages on the left side of the website*/
+.navigation-side-menu{
+    background-color:var(--material-secondary-background-color);
+}
+
+.ripple-clickable-card {
+border-radius:16px;
+}
+
+
+.upload-card{
+    border-radius: 16px;
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #404041;
+}
+
+.upload-title{
+  font-family: "Humnst777 Cn Bold";
+  size: 13px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+      color: #404041;
+      text-align:center;
+      padding: 60px 0 0 0;
+}
+
+.new-project-card-title{
+font-family: "Humnst777 Cn Bold";
+letter-spacing: 0px;
+    color: #404041;
+    font-size: 13px;
+      padding: 40px 0 0 0;
+
+}
+
+.project-card-title{
+color: #404041;
+  font-family: "Humnst777 Cn Bold";
+    overflow-wrap: break-word;
+
+}
+
+.project-card-text-area{
+    border-radius: 16px;
+  background-color: #2CD6FF;
+  color: #404041;
+  padding:0px 10px 0 10px;
+  font-family: "Humnst777 Cn BT";
+    text-transform: capitalize;
+    line-height: normal;
+}
+/* This defines the card showing a project metadata details in the project grid*/
+.project-card {
+  font-family: "Humnst777 Cn BT";
+  color: #404041;
+  text-transform: capitalize;
+  background-color: #E6E7E8;
+  line-height: normal;
+  border-radius: 16px;
+
+  }
+
+.project-card-title{
+font-family: "Humnst777 Cn Bold";
+letter-spacing: 0px;
+text-transform: uppercase;
+    color: #404041;
+    font-size: 13px;
+}
+
+
+.project-card-version{
+font-family: "Humnst777 Cn BT";
+letter-spacing: 0px;
+text-transform: uppercase;
+    color: #404041;
+font-size: 12px;
+
+}
+
+.project-card-tags{
+font-family: "Humnst777 Cn BT";
+letter-spacing: 0px;
+text-transform: uppercase;
+    color: #404041;
+font-size: 12px;
+  margin-top: 5px;
+  white-space: nowrap;
+
+
+}
+
+.v-button {padding: 0 0;}
+
+.project-card-last-update{
+font-family: "Humnst777 Cn BT";
+letter-spacing: 0px;
+text-transform: uppercase;
+    color: #404041;
+  font-size: 12px;
+  margin-top: 5px;
+
+}
+
+.upload-card {
+  background-color: #2CD6FF;
+}
+
+.design-path-upload-card {
+    border-radius: 16px;
+  background-color: #2CD6FF;
+  color: #404041
+  font-family: "Humnst777 Cn BT";
+    text-transform: capitalize;
+    line-height: normal;
+}
+
+.design-path-card-text-area {
+    border-radius: 16px;
+  background-color: #2CD6FF;
+  color: #404041
+  font-family: "Humnst777 Cn BT";
+    text-transform: capitalize;
+    line-height: normal;
+    font-size: 12px;
+    padding: 0px 10px 0 10px;
+    }
+
+.design-path-upload-card-text-area{
+    border-radius: 16px;
+  background-color: #2CD6FF;
+  color: #404041
+  font-family: "Humnst777 Cn BT";
+    text-transform: capitalize;
+    line-height: normal;
+    font-size: 13px;
+}
+
+
+
+.design-path-card-title{
+font-family: "Humnst777 Cn Bold";
+letter-spacing: 0px;
+text-transform: uppercase;
+    color: #404041;
+    font-size: 13px;
+}
+
+.design-path-card {
+/* This defines the card showing a project metadata details in the project grid*/
+  font-family: "Humnst777 Cn BT";
+  color: #404041;
+  text-transform: capitalize;
+  background-color: #E6E7E8;
+  line-height: normal;
+  border-radius: 16px;
+
+  }
+
+.upload-design-path-title{
+  font-family: "Humnst777 Cn Bold";
+  size: 13px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+      color: #404041;
+      margin-top: 5 px;
+      text-align:center;
+  }
+
+.tools-header {
+text-decoration:underline;
+}
+
+.requirements-header{
+text-decoration:underline;
+}
+
+.project-details-asset-list{
+text-decoration:underline;
+padding-left:16px;
+}
+.project-details-asset-list-layout{
+padding-left: 0px;
+padding-right: 0px;
+margin-left: 0px;
+margin-right: 0px;
+}
+/* New Project Grid Object */
+
+
+.grid-layout-element{
+}
+
+/* use condensed font for grid and bold condesned in title row
+change icon color in top right
+chnge line spacing
+add lin back to the top nav
+add dummy 'workspace' variable that just accordians down and says 'my workspace'
+add delete support
+organize project and file upload
+use modal for new project
+*/
+
+.project-card-grid vaadin-vertical-layout {
+ background-color: rgba(0, 0, 0, 0.01);
+}
+
+.project-details-view-page{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.project-details-tools-layout{
+margin-left:32px;
+}
+/* This defines the header section of a project detail view*/
+.project-details-view-metadata-header {
+    background-color: var(--material-contrast-color);
+        justify-content: center;
+}
+/* This defines the full metadata section*/
+.project-details-view-metadata {
+    padding: 0 0 0 0;
+    margin-right: 0px;
+    border-bottom: 1px solid #E6E7E8;
+}
+/* This defines the primary info of the metadata*/
+.project-details-view-metadata-primary {}
+/*This defines the actual main metadata body area*/
+.project-details-view-metadata-body{
+    justify-content:center;
+    margin-top:0 px;
+
+}
+
+.metadata-layout-header-surfaces{
+border-right: 2px solid #E6E7E8;
+
+
+}
+
+.metadata-layout-header-performance{
+border-left: 2px solid #E6E7E8;
+
+}
+/*This defines the surfaces column in the metadata body*/
+.project-details-view-metadata-body-surfaces{
+    justify-content:center;
+        border-right: 2px solid #E6E7E8;
+        padding-top: 16px;
+}
+
+.project-details-asset-list{
+    margin-left:12px;
+}
+
+.project-details-view-metadata-body-performance{
+justify-content:center;
+        border-left: 2px solid #E6E7E8;
+        padding-top: 16px;
+}
+
+.project-tools-button{
+
+}
+
+.metadata-layout-header-performance{
+        border-left: 2px solid #E6E7E8;
+}
+
+.design-path-card-version-button{
+    padding: 0px;
+    text-transform:none;
+    margin: 0px;
+    margin-top: 16px;
+    letter-spacing: 0px;
+      font-family: "Humnst777 Cn BT";
+      font-size: 14px;
+
+}
+.projects-view-tabs{
+   position:absolute;
+   right:0;}
+
+
+/*This defines the materials column in the metadata body*/
+.project-details-view-metadata-body-materials{
+    justify-content:center;
+}
+
+/* This defines the header section of the project details view*/
+.project-details-view-header{
+}
+
+.new-project-view{
+
+}
+
+.project-info{
+color: #404041;
+font-family: "Humnst777 Cn BT";
+      font-size: 14px;
+}
+.design-path-info{
+color: #404041;
+font-family: "Humnst777 Cn BT";
+      font-size: 14px;
+}
+.file-class-upload{
+color: #404041;
+font-family: "Humnst777 Cn BT";
+      font-size: 14px;
+}
+h1, h2, h3, h4, h5 {
+  font-family: "Humnst777 BT";
+
+color: #404041;
+}
+
+a {
+  font-family: "Humnst777 BT";
+  font-size: 14px;
+}
+
+span {
+  font-family: "Humnst777 BT";
+  font-size: 14px;
+}
+
+.svg-optic-line{
+  fill: red;
+  stroke: red;
+  stroke-width: 4;
+}
+
+.svg-optic-line:hover{
+	stroke: slateblue;
+}
+
+
+
+
+
+

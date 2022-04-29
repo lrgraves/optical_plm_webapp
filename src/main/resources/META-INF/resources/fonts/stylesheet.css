@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Humnst777 BT';
+    src: url('/fonts/Humanist777BT-BoldB.woff2') format('woff2'),
+        url('/fonts/Humanist777BT-BoldB.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Humnst777 Lt BT';
+    src: url('/fonts/Humanist777BT-LightB.woff2') format('woff2'),
+        url('/fonts/Humanist777BT-LightB.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Humnst777 Cn BT';
+    src: url('/fonts/Humanist777BT-RomanCondensedB.woff2') format('woff2'),
+        url('/fonts/Humanist777BT-RomanCondensedB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Humnst777 Cn Bold';
+    src: url('/fonts/Humanist777BT-BoldCondensedB.woff2') format('woff2'),
+        url('/fonts/Humanist777BT-BoldCondensedB.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
